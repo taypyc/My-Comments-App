@@ -1,4 +1,4 @@
-# zustand_todo_list
+# Zustand State management + Comments App
 
 ## Start project
 ```
