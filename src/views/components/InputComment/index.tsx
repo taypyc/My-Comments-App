@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState} from 'react';
 
 import styles from './index.module.scss';
 
@@ -19,20 +19,14 @@ export const InputComment: React.FC<InputCommentProps> = ({
 }) => {
     
     const [isEditMode, setIsEditMode] = useState(false);
-    const [value, setValue] = useState(title);
-    const editTitleInputRef = useRef<HTMLInputElement>(null);
-
-    useEffect(() => {
-        if (isEditMode) {
-            editTitleInputRef?.current?.focus();
-        }
-    }, [isEditMode]);
+    const [value, setValue] = useState(title);        
 
     return (
         <div className={styles.inputComment}>            
             { isEditMode ? (
-                <textarea                        
-                    ref={editTitleInputRef}
+                <textarea
+                    cols={200}                
+                    rows={2}                    
                     value={value}
                     onChange={(evt) => {
                         setValue(evt.target.value);
