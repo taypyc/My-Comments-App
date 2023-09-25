@@ -8,9 +8,10 @@
         border: 1px solid #B1B1B1;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
-        padding: 9px 10px;
-        font: 1rem/1.4 'Roboto', sans-serif;
+        padding: 9px 10px;        
+        font: 1rem/1.4 'Caveat', sans-serif;
         background: #DBE2EF;
+        outline: none;
 
         &::placeholder {
             color: #7B7B7B;

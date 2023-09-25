@@ -1,24 +1,9 @@
-.inputTask {
+.inputComment {
     display: grid;
-    grid-template-columns: 1fr 50px 50px;
-    margin-bottom: 15px;
-    background: #DBE2EF;
-    border-radius: 5px;
-    padding-right: 15px;
-
-    &Label {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        align-items: center;
-        padding: 12px 15px;
-        cursor: pointer;
-    }
-
-    &Checkbox {
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-    }
+    grid-template-columns: 1fr 40px 40px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #B1B1B1;
 
     &Title {
         padding: 5px;
@@ -26,11 +11,14 @@
     }
 
     &EditTitle {
-        font: 1rem/1em 'Roboto', sans-serif;
-        border: none;
+        display: block;
+        width: 100%;
+        font: 1rem/1em 'Caveat', sans-serif;
+        border: 1px solid #00F;
         padding: 5px;
-        background: none;
-        box-shadow: 0 4px 0 -3px #3F72AF;
+        background: none;        
+        border: 1px solid #B1B1B1;
+        outline: none;
     }
 
     &Edit, &Remove, &Save {

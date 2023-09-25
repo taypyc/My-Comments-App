@@ -10,29 +10,23 @@ export const InputPlus: React.FC<InputPlusProps> = ({
     onAdd,
 }) => {
     const [inputValue, setInputValue] = useState('');
-    const addTask = useCallback(() => {
-        onAdd(inputValue);
+    const addComment = useCallback(() => {
+        onAdd(inputValue);        
         setInputValue('');
     }, [inputValue]);
 
     return (
         <div className={styles.inputPlus}>
-            <input
-                type="text"
+            <textarea                
                 className={styles.inputPlusValue}
                 value={inputValue}
-                onChange={(evt) => {
+                onChange={(evt) => {                    
                     setInputValue(evt.target.value);
-                }}
-                onKeyDown={(evt) => {
-                    if (evt.key === 'Enter') {
-                        addTask();
-                    }
-                }}
-                placeholder="Type here..."
-            />
+                }}                
+                placeholder="Leave your comment here..."
+            /> 
             <button
-                onClick={addTask}
+                onClick={addComment}
                 aria-label="Add"
                 className={styles.inputPlusButton}
             />
