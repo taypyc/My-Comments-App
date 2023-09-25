@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 
-import { useToDoStore } from '../../data/stores/useToDoStore';
+import { useCommentsStore } from '../../data/stores/useCommentsStore';
 import { InputPlus } from '../components/InputPlus';
 import { InputComment } from '../components/InputComment';
 
@@ -18,7 +18,7 @@ export const CommentsList: React.FC<CommentsListProps> = ({
         createComment,
         updateComment,
         removeComment
-    ] = useToDoStore(state => [
+    ] = useCommentsStore(state => [
         state.comments,
         state.createComment,
         state.updateComment,
